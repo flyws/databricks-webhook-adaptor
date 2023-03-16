@@ -1,0 +1,16 @@
+{
+    "databricks_workspaces": [
+        {
+            "workspace_id": "1234567890",
+            "databricks_instance": "eastus2.azuredatabricks.net",
+            "databricks_token": "dapi1234567890"
+        },
+        {
+            "workspace_id": "1234567890",
+            "databricks_instance": "aws.cloud.databricks.com",
+            "databricks_token": "dapi1234567890"
+        }
+    ],
+    "wecom_webhook_url": "https://qyapi.weixin.qq.com/cgi-bin/webhook/send?key=xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+    "feishu_webhook_url": "https://open.feishu.cn/open-apis/bot/v2/hook/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
+}
