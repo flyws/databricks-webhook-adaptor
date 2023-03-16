@@ -27,8 +27,8 @@ There are two ways to use this project:
 ### Build and run the Docker image
 1. Download the code from this repo to your server.
 2. Build the Docker image by `docker build -t databricks-webhook-adaptor .`.
-3. Run the Docker image by `docker run -d -p 5000:5000 databricks-webhook-adaptor`.
-4. Add the webhook URL to your Databricks Workflow. Example: `http://<your_server_ip>:80/webhook`.
+3. Run the Docker image by `docker run -d -p 5000:80 databricks-webhook-adaptor`.
+4. Add the webhook URL to your Databricks Workflow. Example: `http://<your_server_ip>:5000/webhook`.
 5. Run the workflow and check the notification on your IM tool.
 
 ## How to find your workspace ID?
