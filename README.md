@@ -45,9 +45,9 @@ There are two ways to use this project:
 ## How to add new IM tools
 This project is designed to be highly extensible. You can add new IM tools by following the steps below:
 1. Create a new Python file under the same folder. The file name should be the name of the IM tool + `_bot`.
-2. Import the new adaptor function into the main webhook adaptor script `webhook_adaptor.py`.
+2. Import the new adaptor function into the main Flask server script `webhook_server.py`.
 3. Change the `config.json` file to add the new IM tool name.
-4. Add your send function into the main script `webhook_adaptor.py`.
+4. Add your send function into the main script `webhook_server.py`.
 5. Test
 
 ## How to customize your message
