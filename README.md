@@ -9,14 +9,14 @@ This project is a minimal implementation of the webhook adaptor. It is designed 
 ## Requirements
 1. You have a server that can run a Python script.
 2. The server has a public IP address / domain name and can accept web request from Databricks server.
-3. The server can access the internet and send out the relay message.
+3. The server can access the internet and send out the relay message.(Or strictly only allow Databricks API and Webhook URLs)
 
 ***Note that in best practice you shouldn't expose your server to accept all web requests from the internet. You should find the Databricks server IP and only accept its web requests. You can find the relevant IPs in Databricks doc or from a test site like [webhook.site](https://webhook.site/)***
 
 ## Architecture
 ```text
 +---------------------+               +-----------------------+               +---------------------+
-| Databricks Control  | --webhook-->  | Your Flask Application | --webhook-->  |  IM Tool (Feishu or |
+| Databricks Control  | --webhook-->  |    Flask Application   | --webhook-->  |  IM Tool (Feishu or |
 |       Plane         |               |       (Server)         |               |        Wecom)       |
 +---------------------+               +-----------------------+               +---------------------+
                                      ^                          |
