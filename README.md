@@ -13,6 +13,23 @@ This project is a minimal implementation of the webhook adaptor. It is designed 
 
 ***Note that in best practice you shouldn't expose your server to accept all web requests from the internet. You should find the Databricks server IP and only accept its web requests. You can find the relevant IPs in Databricks doc or from a test site like [webhook.site](https://webhook.site/)***
 
+## Architecture
+```text
++---------------------+               +-----------------------+               +---------------------+
+| Databricks Control  | --webhook-->  | Your Flask Application | --webhook-->  |  IM Tool (Feishu or |
+|       Plane         |               |       (Server)         |               |        Wecom)       |
++---------------------+               +-----------------------+               +---------------------+
+                                     ^                          |
+                                     |                          |
+                             Allow traffic only from            |
+                           Databricks Control Plane IP          |
+                                                                 |
+                                                                 v
+                                                      +---------------------+
+                                                      | Databricks Jobs API |
+                                                      +---------------------+
+```
+
 ## How to use
 There are two ways to use this project:
 
